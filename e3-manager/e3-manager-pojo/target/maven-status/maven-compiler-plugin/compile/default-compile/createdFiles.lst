@@ -25,6 +25,7 @@ cn\e3mall\po\TbItemParamExample$GeneratedCriteria.class
 cn\e3mall\po\TbOrderExample$Criterion.class
 cn\e3mall\po\TbContentCategory.class
 cn\e3mall\po\TbItemParamItemExample$Criterion.class
+cn\e3mall\domian\EasyUIDataGridResult.class
 cn\e3mall\po\TbOrderItemExample.class
 cn\e3mall\po\TbContent.class
 cn\e3mall\po\TbOrderItem.class
@@ -32,8 +33,8 @@ cn\e3mall\po\TbUserExample$GeneratedCriteria.class
 cn\e3mall\po\TbOrderShippingExample$GeneratedCriteria.class
 cn\e3mall\po\TbItemExample.class
 cn\e3mall\po\TbOrderExample$Criteria.class
-cn\e3mall\po\TbOrderExample$GeneratedCriteria.class
 cn\e3mall\po\TbOrderShippingExample$Criterion.class
+cn\e3mall\po\TbOrderExample$GeneratedCriteria.class
 cn\e3mall\po\TbOrderShippingExample.class
 cn\e3mall\po\TbContentCategoryExample$Criteria.class
 cn\e3mall\po\TbItemExample$Criteria.class
