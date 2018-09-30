@@ -79,7 +79,7 @@
 		$("#itemeEditForm [name=price]").val(eval($("#itemeEditForm [name=priceView]").val()) * 1000);
 		itemEditEditor.sync();
 		
-		var paramJson = [];
+		/* var paramJson = [];
 		$("#itemeEditForm .params li").each(function(i,e){
 			var trs = $(e).find("tr");
 			var group = trs.eq(0).text();
@@ -98,7 +98,7 @@
 		});
 		paramJson = JSON.stringify(paramJson);
 		
-		$("#itemeEditForm [name=itemParams]").val(paramJson);
+		$("#itemeEditForm [name=itemParams]").val(paramJson); */
 		
 		$.post("/rest/item/update",$("#itemeEditForm").serialize(), function(data){
 			if(data.status == 200){

@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class TbItem implements Serializable{
-    private Long id;
+    private Long id;      
 
     private String title;
 
@@ -18,7 +18,7 @@ public class TbItem implements Serializable{
 
     private String image;
 
-    private Long cid;
+    private Long cid; 
 
     private Byte status;
 

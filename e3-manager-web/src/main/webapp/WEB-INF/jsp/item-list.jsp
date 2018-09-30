@@ -17,7 +17,7 @@
         </tr>
     </thead>
 </table>
-<div id="itemEditWindow" class="easyui-window" title="编辑商品" data-options="modal:true,closed:true,iconCls:'icon-save',href:'/rest/page/item-edit'" style="width:80%;height:80%;padding:10px;">
+<div id="itemEditWindow" class="easyui-window" title="编辑商品" data-options="modal:true,closed:true,iconCls:'icon-save',href:'/item-edit'" style="width:80%;height:80%;padding:10px;">
 </div>
 <script>
 
@@ -56,7 +56,9 @@
         		onLoad :function(){
         			//回显数据
         			var data = $("#itemList").datagrid("getSelections")[0];
+        			console.log(data.price);
         			data.priceView = E3.formatPrice(data.price);
+        			console.log(data.priceView);
         			$("#itemeEditForm").form("load",data);
         			
         			// 加载商品描述
@@ -68,15 +70,15 @@
         			});
         			
         			//加载商品规格
-        			$.getJSON('/rest/item/param/item/query/'+data.id,function(_data){
+        			/* $.getJSON('/rest/item/param/item/query/'+data.id,function(_data){
         				if(_data && _data.status == 200 && _data.data && _data.data.paramData){
         					$("#itemeEditForm .params").show();
         					$("#itemeEditForm [name=itemParams]").val(_data.data.paramData);
         					$("#itemeEditForm [name=itemParamId]").val(_data.data.id);
-        					
+        					alert($("#itemeEditForm [name=itemParamId]").val()+"");
         					//回显商品规格
         					 var paramData = JSON.parse(_data.data.paramData);
-        					
+        					 alert(paramData);
         					 var html = "<ul>";
         					 for(var i in paramData){
         						 var pd = paramData[i];
@@ -93,7 +95,7 @@
         					 html+= "</ul>";
         					 $("#itemeEditForm .params td").eq(1).html(html);
         				}
-        			});
+        			}); */
         			
         			E3.init({
         				"pics" : data.image,
@@ -127,7 +129,7 @@
         	    }
         	});
         }
-    },'-',{
+    },{
         text:'下架',
         iconCls:'icon-remove',
         handler:function(){
