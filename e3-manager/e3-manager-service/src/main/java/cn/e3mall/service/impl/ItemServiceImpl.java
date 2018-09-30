@@ -41,9 +41,6 @@ public class ItemServiceImpl implements ItemService {
 			
 			return list.get(0);
 		}
-		
-	//	TbItem selectByPrimaryKey = mapper.selectByPrimaryKey(id);
-		
 		return null;
 	}
 
