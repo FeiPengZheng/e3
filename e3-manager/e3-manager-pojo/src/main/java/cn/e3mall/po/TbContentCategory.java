@@ -1,8 +1,9 @@
 package cn.e3mall.po;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbContentCategory {
+public class TbContentCategory implements Serializable{
     private Long id;
 
     private Long parentId;
