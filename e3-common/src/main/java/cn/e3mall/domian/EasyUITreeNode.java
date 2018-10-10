@@ -2,8 +2,8 @@ package cn.e3mall.domian;
 
 import java.io.Serializable;
 
-public class EasyUITreeNode implements Serializable{
 
+public class EasyUITreeNode implements Serializable{
 	private long id;
 	private String text;
 	private String state;

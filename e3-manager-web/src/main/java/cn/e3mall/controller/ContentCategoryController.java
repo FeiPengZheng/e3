@@ -27,6 +27,10 @@ public class ContentCategoryController {
 		return categoryService.getContentCategory(parentId);
 	}
 	
+	
+	
+	
+	
 	@RequestMapping("/content/category/create")
 	@ResponseBody
 	public E3Result addContentCategory(long parentId,String name){

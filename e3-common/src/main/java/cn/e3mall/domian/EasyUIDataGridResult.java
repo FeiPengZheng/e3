@@ -6,6 +6,11 @@ import java.util.List;
 public class EasyUIDataGridResult implements Serializable{
 
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private Integer total;
 	
 	//通配符

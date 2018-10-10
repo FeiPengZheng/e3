@@ -68,6 +68,7 @@ var contentListToolbar = [{
 			url : "/content-edit",
 			onLoad : function(){
 				var data = $("#contentList").datagrid("getSelections")[0];
+				console.log(data);
 				$("#contentEditForm").form("load",data);
 				
 				// 实现图片
