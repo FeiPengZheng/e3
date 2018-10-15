@@ -23,7 +23,7 @@
 
 	<mvc:resources location="/WEB-INF/js/" mapping="/js/**" />
 	<mvc:resources location="/WEB-INF/css/" mapping="/css/**" />
- 
+
 
 	<!-- 定义文件上传解析器 -->
 	<bean id="multipartResolver"
@@ -33,13 +33,12 @@
 		<!-- 设定文件上传的最大值5MB，5*1024*1024 -->
 		<property name="maxUploadSize" value="5242880"></property>
 	</bean>
-	
+
 
 
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="e3-manager-web" />
-	<dubbo:registry protocol="zookeeper"
-		address="192.168.25.129:2181" />
+	<dubbo:registry protocol="zookeeper" address="192.168.25.129:2181" />
 	<dubbo:reference interface="cn.e3mall.service.ItemService"
 		id="itemService" />
 	<dubbo:reference interface="cn.e3mall.service.ItemCatService"
@@ -48,4 +47,6 @@
 		id="contentCategoryService" />
 	<dubbo:reference interface="cn.e3mall.content.service.ContentManagerService"
 		id="contentManagerService" />
+	<dubbo:reference interface="cn.e3mall.search.service.SearchItemService"
+		id="searchItemService" />
 </beans>

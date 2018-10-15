@@ -5,13 +5,17 @@
     <artifactId>e3-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>e3-content</artifactId>
+  <groupId>cn.e3mall</groupId>
+  <artifactId>e3-search</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-  	<module>e3-content-interface</module>
-  	<module>e3-content-service</module>
+  	<module>e3-search-interface</module>
+  	<module>e3-search-service</module>
   </modules>
-  <dependencies>
+  
+  
+   <dependencies>
 		<dependency>
 			<groupId>cn.e3mall</groupId>
 			<artifactId>e3-common</artifactId>
@@ -25,7 +29,7 @@
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<configuration>
-					<port>8084</port>
+					<port>8085</port>
 					<path>/</path>
 				</configuration>
 			</plugin>

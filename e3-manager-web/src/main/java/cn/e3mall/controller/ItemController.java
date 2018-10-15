@@ -16,6 +16,7 @@ import com.alibaba.dubbo.remoting.exchange.Request;
 import cn.e3mall.domian.EasyUIDataGridResult;
 import cn.e3mall.po.TbItem;
 import cn.e3mall.po.TbItemDesc;
+import cn.e3mall.search.service.SearchItemService;
 import cn.e3mall.service.ItemService;
 import cn.e3mall.utils.E3Result;
 
@@ -143,6 +144,20 @@ public class ItemController {
 			longIdList.add(Long.valueOf(string));
 		}
 		return itemService.instock(longIdList);
+	}
+	
+	@Autowired
+	private SearchItemService searchItemService;
+	
+
+	/**
+	 * 将商品导入到索引库
+	 * @return
+	 */
+	@RequestMapping("/index/item/import")
+	@ResponseBody
+	public E3Result importAllItems(){
+		return searchItemService.importItems();
 	}
 	
 }
