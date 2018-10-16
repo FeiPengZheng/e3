@@ -1,6 +1,8 @@
 package cn.e3mall.domian;
 
-public class SearchItem {
+import java.io.Serializable;
+
+public class SearchItem implements Serializable{
 
 
 	private String id;
@@ -46,5 +48,12 @@ public class SearchItem {
 		this.title = title;
 	}
 	
+	public String[] getImages(){
+		if (image != null && "" != image) {
+			String[] images = image.split(",");
+			return images;
+		}
+		return null;
+	}
 	
 }

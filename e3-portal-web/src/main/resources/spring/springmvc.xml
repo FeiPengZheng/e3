@@ -30,5 +30,7 @@
 		id="itemService" />
 	 <dubbo:reference interface="cn.e3mall.content.service.ContentManagerService"
 		id="contentManagerService" />
+	<dubbo:reference interface="cn.e3mall.search.service.SearchService"
+		id="searchService" />
 
 </beans>
