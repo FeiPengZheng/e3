@@ -20,7 +20,9 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-
+	
+	<!-- 全局异常处理器 -->
+	<bean class="cn.e3mall.protal.controller.GlobalExceptionReslover"></bean>
 
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="e3-portal-web" />
