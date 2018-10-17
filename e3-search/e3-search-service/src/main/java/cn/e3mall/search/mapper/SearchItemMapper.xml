@@ -16,4 +16,24 @@
 		WHERE
 		item. STATUS = 1
 	</select>
+	
+	
+	<select id="searchItemById"  parameterType="long"     resultType="cn.e3mall.domian.SearchItem">
+		SELECT
+			item.id,
+			item.title,
+			item.sell_point,
+			item.price,
+			item.image,
+			cat.`name` category_name,
+			c.item_desc
+		FROM
+			tb_item item
+		LEFT JOIN tb_item_cat cat ON item.cid = cat.id
+		LEFT JOIN tb_item_desc c ON item.id = c.item_id
+		WHERE
+		item. STATUS = 1
+		AND 
+		item.id = #{id}
+	</select>
 </mapper>

@@ -1,9 +1,13 @@
 package test;
 
+import java.io.IOException;
+
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.impl.HttpSolrServer;
 import org.apache.solr.common.SolrInputDocument;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MyTest {
 
@@ -28,4 +32,21 @@ public class MyTest {
 		// 第六步：提交。
 		solrServer.commit();
 	}
+	
+	@Test
+	public void testQueueCustomer() throws Exception{
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring/applicationContext-activemq.xml");
+		
+		System.in.read();
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 }
