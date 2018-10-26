@@ -1,5 +1,9 @@
 package cn.e3mall.redis;
 
+import java.util.List;
+
+import org.junit.validator.PublicClassValidator;
+
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
@@ -88,5 +92,25 @@ public class JedisClientPool implements JedisClient {
 		jedis.close();
 		return result;
 	}
+
+	
+	@Override
+	public List<String> hvals(String key) {
+		Jedis jedis = jedisPool.getResource();
+		List<String> list = jedis.hvals(key);
+		jedis.close();
+		return list;
+	}
+
+	@Override
+	public Boolean hexists(String key, String itemId) {
+		// TODO Auto-generated method stub
+		Jedis jedis = jedisPool.getResource();
+		Boolean hexists = jedis.hexists(key, itemId);
+		jedis.close();
+		return hexists;
+	}
+	
+
 
 }

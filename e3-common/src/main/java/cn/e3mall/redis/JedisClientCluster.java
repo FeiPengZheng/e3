@@ -1,6 +1,8 @@
 package cn.e3mall.redis;
 
 
+import java.util.List;
+
 import redis.clients.jedis.JedisCluster;
 
 public class JedisClientCluster implements JedisClient {
@@ -64,4 +66,16 @@ public class JedisClientCluster implements JedisClient {
 		return jedisCluster.hdel(key, field);
 	}
 
+
+	@Override
+	public List<String> hvals(String key) {
+		List<String> list = jedisCluster.hvals(key);
+		return list;
+	}
+
+	@Override
+	public Boolean hexists(String key, String itemId) {
+		// TODO Auto-generated method stub
+		return jedisCluster.hexists(key, itemId);
+	}
 }

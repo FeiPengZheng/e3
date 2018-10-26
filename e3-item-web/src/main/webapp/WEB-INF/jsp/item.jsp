@@ -241,7 +241,8 @@
                 <li class="curr" pcont-target="div-detail"><a title="商品详情" href="javascript:void(0);">商品介绍</a></li>
                                 <li pcont-target="div-comment"><a title="用户评价" href="javascript:void(0);">评价<b>(<font class="comment-total-sf">0</font>)</b></a></li>
                             </ul>
-            <div id="add-cart-r-btn-sf" class="p-btn"><a href="javascript:void(0);" data_url="http://p02.e3mall.cn/2016/1600229585/thumb_1600229585_1_1.jpg" pid="${item.id}">加入购物车</a></div>
+            <div id="add-cart-r-btn-sf" class="p-btn"><a href="javascript:void(0);"
+             data_url="http://p02.e3mall.cn/2016/1600229585/thumb_1600229585_1_1.jpg" pid="${item.id}">加入购物车</a></div>
         </div>
         <div class="clear" id="flow-layer-sf"></div>
 		<div class="pCont cpjs_box" id="div-detail">
