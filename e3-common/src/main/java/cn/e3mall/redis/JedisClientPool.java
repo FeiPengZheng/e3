@@ -110,6 +110,12 @@ public class JedisClientPool implements JedisClient {
 		jedis.close();
 		return hexists;
 	}
+
+	@Override
+	public Long del(String key) {
+		Jedis jedis = jedisPool.getResource();
+		return jedis.del(key);
+	}
 	
 
 

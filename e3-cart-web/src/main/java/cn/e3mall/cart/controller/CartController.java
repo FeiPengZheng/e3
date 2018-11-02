@@ -55,6 +55,7 @@ public class CartController {
 		
 		//1从coolkie中查询商品列表
 		List<TbItem> cartList = getCartList(request);
+		
 		boolean hasItem = false;
 		for (TbItem tbItem : cartList) {
 			if (tbItem.getId() == itemid.longValue()) {

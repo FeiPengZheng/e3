@@ -78,4 +78,10 @@ public class JedisClientCluster implements JedisClient {
 		// TODO Auto-generated method stub
 		return jedisCluster.hexists(key, itemId);
 	}
+
+	@Override
+	public Long del(String key) {
+		
+		return jedisCluster.del(key);
+	}
 }
